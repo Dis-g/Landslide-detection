@@ -1,12 +1,14 @@
 import rasterio
 import numpy as np
 
-with rasterio.open('../dataset/Darjeeling_Elevation.tif') as src:
-    elevation = src.read(1)
+def tiftopython():
+    with rasterio.open('../dataset/Darjeeling_Elevation.tif') as src:
+        elevation = src.read(1)
 
-print(elevation.shape)
+    print(elevation.shape)
 
-with rasterio.open('../dataset/Darjeeling_Slope.tif') as src:
-    slope = src.read(1)
+    with rasterio.open('../dataset/Darjeeling_Slope.tif') as src:
+        slope = src.read(1)
 
-print(slope.shape)
+    print(slope.shape)
+    return elevation, slope
