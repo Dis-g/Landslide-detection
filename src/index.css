@@ -76,3 +76,13 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+@layer components{
+  .about-card-container{
+    @apply flex flex-col gap-2 justify-center w-[250px] items-center border-teal-600 border-2 rounded-2xl p-3
+  }
+  .card-group{
+    @apply flex flex-row gap-1 justify-evenly
+  }
+}

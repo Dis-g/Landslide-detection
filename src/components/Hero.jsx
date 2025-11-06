@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section id="home" className="relative h-[90vh] flex items-center justify-center bg-gradient-to-br from-teal-700 to-indigo-900">
+    <section id="home" className="relative h-[90vh] flex items-center justify-center bg-linear-to-br from-teal-700 to-indigo-900">
       <div className="absolute inset-0 bg-[url('https://upload.wikimedia.org/wikipedia/commons/7/7c/Landslide_in_Nepal_2015.jpg')] bg-cover bg-center opacity-30"></div>
       <div className="relative text-center z-10 max-w-3xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-extrabold mb-4">
