@@ -43,7 +43,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative flex flex-col items-center justify-center h-screen overflow-hidden">
+    <section id="home" className="relative flex flex-col items-center justify-center h-screen overflow-hidden">
       {/* Background video (full loop) */}
       <video
         ref={videoRef}
