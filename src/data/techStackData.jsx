@@ -1,4 +1,4 @@
-import python from "../assets/techStackIcons/python-svgrepo-com.svg";
+import python from "../assets/techstackIcons/python-svgrepo-com.svg";
 import numpy from "../assets/techstackicons/numpy.svg";
 import pandas from "../assets/techstackicons/pandas.svg";
 import matplotlib from "../assets/techstackicons/matplotlib.png";
