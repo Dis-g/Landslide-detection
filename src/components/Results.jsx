@@ -1,25 +1,52 @@
-export default function Results() {
-  return (
-    <section id="results" className="py-20 bg-gradient-to-b from-[#1e1b4b] via-[#312e81] to-[#1e1b4b] text-white">
-      <h2 className="text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-400 mb-12">
-        Results & Performance
-      </h2>
+import React from "react";
+import { motion } from "framer-motion";
 
-      {/* Metrics */}
+export default function Results() {
+  const metrics = [
+    { title: "Accuracy", value: "94%" },
+    { title: "Precision", value: "92%" },
+    { title: "Recall", value: "90%" },
+    { title: "F1-Score", value: "91%" },
+  ];
+
+  return (
+    <section
+      id="results"
+      className="py-20 bg-gradient-to-b from-[#1e1b4b] via-[#312e81] to-[#1e1b4b] text-white"
+    >
+      {/* Section Heading */}
+      <motion.h2
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        viewport={{ once: false, amount: 0.4 }}
+        className="text-center text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-indigo-400 mb-12"
+      >
+        Results & Performance
+      </motion.h2>
+
+      {/* Animated Metrics */}
       <div className="max-w-5xl mx-auto px-6 grid md:grid-cols-4 gap-6 mb-16">
-        {[
-          { title: "Accuracy", value: "94%" },
-          { title: "Precision", value: "92%" },
-          { title: "Recall", value: "90%" },
-          { title: "F1-Score", value: "91%" },
-        ].map((metric, i) => (
-          <div
+        {metrics.map((metric, i) => (
+          <motion.div
             key={i}
-            className="bg-slate-900/60 border border-slate-700 p-6 rounded-xl text-center shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 1.2, // ⏳ slower scale transition
+              delay: 0.15 * i,
+              ease: [0.22, 1, 0.36, 1], // smooth, natural cubic-bezier
+            }}
+            viewport={{ once: false, amount: 0.4 }}
+            className="bg-slate-900/60 border border-slate-700 p-6 rounded-xl text-center shadow-md hover:shadow-lg hover:scale-[1.03] transition-all duration-300"
           >
-            <h3 className="text-xl font-semibold text-teal-300 mb-2">{metric.title}</h3>
-            <p className="text-3xl font-extrabold text-white">{metric.value}</p>
-          </div>
+            <h3 className="text-xl font-semibold text-teal-300 mb-2">
+              {metric.title}
+            </h3>
+            <p className="text-3xl font-extrabold text-white">
+              {metric.value}
+            </p>
+          </motion.div>
         ))}
       </div>
 
@@ -58,7 +85,7 @@ export default function Results() {
           Detected Regions Map
         </h3>
 
-        <div className="relative overflow-hidden rounded-xl shadow-lg transition-transform duration-">
+        <div className="relative overflow-hidden rounded-xl shadow-lg">
           <img
             src="https://www.researchgate.net/publication/345718542/figure/fig2/AS:960835379802112@1606092414071/The-map-below-shows-2085-reported-landslides-with-fatalities-from-NASAs-Global-Landslide.png"
             alt="Landslide Hazard Map"

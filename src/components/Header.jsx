@@ -110,10 +110,10 @@ export default function Navbar() {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              onClick={() => setOpenContrib((prev) => !prev)} // ✅ Toggle on click
+              onClick={() => setOpenContrib((prev) => !prev)} // Toggle on click
               className="
                 px-4 py-2 bg-gradient-to-r from-[#2563EB] to-[#0EA5E9]
-                text-white rounded-md shadow-md
+                text-white rounded-2md shadow-md
                 hover:from-[#1E40AF] hover:to-[#0284C7]
                 transition-all text-sm
               "
@@ -131,7 +131,7 @@ export default function Navbar() {
                   transition={{ duration: 0.3, ease: "easeOut" }}
                   className="
                     absolute right-0 mt-2 w-64 bg-[#1E293B]/90 
-                    backdrop-blur-md border border-white/10 
+                    backdrop-blur-md border border-white/40 
                     shadow-2xl rounded-xl py-3 text-sm z-50
                   "
                 >

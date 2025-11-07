@@ -14,6 +14,41 @@ body {
   -ms-overflow-style: none;
 }
 
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/src/assets/fonts/Gilroy-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/src/assets/fonts/Gilroy-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/src/assets/fonts/Gilroy-Italic.woff') format('woff');
+  font-weight: 400; /* or whatever weight your italic file is */
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Make Gilroy your default sans font */
+:root {
+  --font-sans: 'Gilroy', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont;
+}
+
+/* Override Tailwind’s base font */
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

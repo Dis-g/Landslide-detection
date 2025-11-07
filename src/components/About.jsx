@@ -4,35 +4,35 @@ import AboutCard from "./AboutCard";
 const About = () => {
   const members = [
     {
-      name: "Aditi Singh",
+      name: "Aditi",
       branch: "ECE",
       rollNo: "230102005",
       role: "Web Developer",
       image: "Aditi_card.jpg",
     },
     {
-      name: "Disanti Ghosh",
+      name: "Disanti",
       branch: "ECE",
       rollNo: "230102026",
       role: "ML Engineer",
       image: "/Disanti_card.jpg",
     },
     {
-      name: "Kanishk Pandey",
+      name: "Kanishk",
       branch: "ECE",
       rollNo: "230102035",
       role: "ML Engineer",
       image: "Kanishk_card.jpg",
     },
     {
-      name: "Shivendru Paul",
+      name: "Shivendru",
       branch: "ECE",
       rollNo: "230102062",
       role: "Web Developer",
       image: "Shivendru_card.jpg",
     },
     {
-      name: "Sudhanshu Katiyar",
+      name: "Sudhanshu",
       branch: "CSE",
       rollNo: "230101140",
       role: "Web Developer",
