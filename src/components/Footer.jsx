@@ -1,12 +1,23 @@
 export default function Footer() {
   return (
-    <footer className="py-6 bg-slate-950 text-center text-gray-400">
-      <p>© 2025 Landslide Detection Project | Developed at XYZ University</p>
-      <div className="mt-2 space-x-4">
-        <a href="#" className="hover:text-teal-400">Contact</a>
-        <a href="#" className="hover:text-teal-400">Acknowledgements</a>
-        <a href="#" className="hover:text-teal-400">GitHub</a>
-      </div>
+    <footer className="py-6 text-center text-gray-100 bg-[#424874] shadow-inner">
+      <p className="text-lg font-bold mb-2">
+        {/* Gradient text for college name */}
+        <span
+          className="
+            bg-gradient-to-r from-[#f4eeff] via-[#dcd6f7] to-[#a6b1e1]
+            bg-clip-text text-transparent
+            hover:from-[#a6b1e1] hover:via-[#dcd6f7] hover:to-[#f4eeff]
+            transition-all duration-500 cursor-pointer
+          "
+        >
+          Indian Institute Of Information Technology Bhagalpur
+        </span>
+      </p>
+
+      <p className="text-sm text-gray-300 mt-2">
+        © 2025 Landslide Detection Project | Developed by IIIT Bhagalpur Students
+      </p>
     </footer>
   );
 }

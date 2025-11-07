@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* -------------------------------------
+   ✅ SAFE GLOBAL CSS (NO BUTTON OVERRIDES)
+-------------------------------------- */
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -15,17 +19,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body {
+html {
+  scroll-behavior: smooth;
   height: 100%;
-  margin: 0;
-  min-width: 320px;
 }
 
 body {
+  height: 100%;
+  margin: 0;
+  min-width: 320px;
   min-height: 100vh;
-  /* Removed flex and centering */
-  /* display: flex; */
-  /* place-items: center; */
 }
 
 a {
@@ -43,6 +46,7 @@ h1 {
   line-height: 1.1;
 }
 
+/* ✅ REMOVED THE GLOBAL BUTTON STYLES
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -63,16 +67,22 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+*/
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
+  /* ✅ Removed button override here too */
+  /*
   button {
     background-color: #f9f9f9;
   }
+  */
 }

@@ -10,3 +10,6 @@ export default function Download() {
     </section>
   );
 }
+
+
+//footer,results,navbar

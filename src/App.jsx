@@ -10,11 +10,14 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 to-gray-800 text-white font-sans flex flex-col">
       <Header />
-      <Hero />
-      <Demo />
-      <Methodology />
-      <Results />
-      <Download />
+
+      {/* Add matching IDs for smooth scrolling */}
+      <Hero id="home" />
+      <Demo id="demo" />
+      <Methodology id="methodology" />
+      <Results id="results" />
+      <Download id="download" />
+
       <Footer />
     </div>
   );
