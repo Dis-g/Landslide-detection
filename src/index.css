@@ -4,7 +4,6 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
@@ -85,4 +84,39 @@ button:focus-visible {
   .card-group{
     @apply flex flex-row gap-1 justify-evenly
   }
+
+  .techstack-container{
+    @apply flex 
+  }
+}
+
+.card-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  position: relative;
+}
+
+.card-scroll-inner {
+  display: inline-flex;
+  gap: 24px;
+  animation: scroll 20s linear infinite;
+}
+
+.card-scroll:hover .card-scroll-inner {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }

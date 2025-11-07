@@ -40,7 +40,7 @@ const About = () => {
         }
     ]
   return (
-    <section id="about" className="py-20 bg-slate-800 rounded-2xl">
+    <section id="about" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900 overflow-hidden">
       <h2 className="text-center text-4xl font-bold text-teal-400 mb-10">About Us</h2>
       <div className="card-group">
         {members.map((m,i)=>(
