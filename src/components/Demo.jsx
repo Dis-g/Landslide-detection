@@ -58,7 +58,7 @@ export default function TestItYourself() {
 
   return (
     <section id="demo" className="bg-white/99 backdrop-blur-md p-10 shadow-lg border border-emerald-100 w-full mx-auto">
-      <h2 className="text-3xl font-bold text-emerald-700 mb-3 text-center">Test it Yourself</h2>
+      <h2 className="text-3xl font-bold text-emerald-700 mb-15 text-center ">Test it Yourself</h2>
       <div className="grid md:grid-cols-2 gap-10 items-center justify-center">
         {/* Left Section: Description Box */}
         <div className="bg-linear-to-br from-emerald-50 to-emerald-100 rounded-2xl p-8 border border-emerald-200 shadow-inner h-full flex flex-col justify-center">
