@@ -27,7 +27,7 @@ export default function Methodology() {
   ];
 
   return (
-    <section id="methodology" className="mt-20 bg-white p-12 rounded-3xl shadow-lg border border-emerald-100">
+    <section id="methodology" className="mt-20 bg-gray-50 p-12 shadow-lg border border-emerald-100">
       <h2 className="text-3xl font-bold text-emerald-700">How it Works</h2>
       <p className="text-slate-600 mt-3 text-lg">The model follows a multi-step process from data preparation to final classification.</p>
       <div className="mt-10 grid md:grid-cols-4 gap-8">

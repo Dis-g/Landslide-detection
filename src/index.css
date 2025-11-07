@@ -1,4 +1,18 @@
 @import "tailwindcss";
+/* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* For Internet Explorer/Edge (old versions) */
+body {
+  -ms-overflow-style: none;
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
