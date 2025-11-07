@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
@@ -10,6 +10,7 @@ export default function Navbar() {
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const dropdownRef = useRef(null);
   let closeTimeout;
 
   const scrollTo = (id) => {
@@ -31,6 +32,17 @@ export default function Navbar() {
     else setVisible(true);
     setLastScrollY(window.scrollY);
   };
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setOpenContrib(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
@@ -71,7 +83,7 @@ export default function Navbar() {
             { id: "demo", label: "Demo" },
             { id: "results", label: "Results" },
             { id: "methodology", label: "Methodology" },
-            { id: "download", label: "About" },
+            { id: "about", label: "About" },
           ].map((item) => (
             <li
               key={item.id}
@@ -93,10 +105,12 @@ export default function Navbar() {
           {/* Contribute Dropdown */}
           <li
             className="relative list-none"
+            ref={dropdownRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
             <button
+              onClick={() => setOpenContrib((prev) => !prev)} // ✅ Toggle on click
               className="
                 px-4 py-2 bg-gradient-to-r from-[#2563EB] to-[#0EA5E9]
                 text-white rounded-md shadow-md
@@ -120,8 +134,6 @@ export default function Navbar() {
                     backdrop-blur-md border border-white/10 
                     shadow-2xl rounded-xl py-3 text-sm z-50
                   "
-                  onMouseEnter={() => clearTimeout(closeTimeout)}
-                  onMouseLeave={handleMouseLeave}
                 >
                   {[
                     {

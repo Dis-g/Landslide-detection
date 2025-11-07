@@ -1,6 +1,6 @@
 import React from "react";
 import {motion} from "framer-motion";
-import {techStack} from "../data/TechStackData";
+import {techStack} from "../data/techStackData";
 
 const TechStack = () => {
   return (
