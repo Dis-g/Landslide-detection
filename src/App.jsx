@@ -8,14 +8,14 @@ import Footer from "./components/Footer";
 import TechStack from "./components/TechStack"
 function App() {
   return (
-    <div className="min-h-screen bg-linear-to-b from-slate-900 to-gray-800 text-white font-sans flex flex-col">
+    <div className="min-h-screen text-white font-sans ">
       <Header />
       <Hero />
+      <Methodology /> 
       <Demo />
-      <Methodology />
+      <Results />
       <TechStack />
       <About />
-      <Results />
       <Footer />
     </div>
   );
