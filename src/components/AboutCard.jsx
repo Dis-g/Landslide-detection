@@ -35,7 +35,7 @@ const AboutCard = ({ name, branch, rollNo, role, image }) => {
         </motion.h3>
         <p className="text-teal-300">{branch}</p>
         <p className="text-teal-300">Roll No: {rollNo}</p>
-        <p className="text-teal-300 mb-2">Role: {role}</p>
+        {/* <p className="text-teal-300 mb-2">Role: {role}</p> */}
       </div>
     </motion.div>
   );

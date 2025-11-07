@@ -57,7 +57,7 @@ export default function TestItYourself() {
   };
 
   return (
-    <section id="demo" className="mt-2 bg-white/99 backdrop-blur-md p-10 shadow-lg border border-emerald-100 w-full mx-auto">
+    <section id="demo" className="bg-white/99 backdrop-blur-md p-10 shadow-lg border border-emerald-100 w-full mx-auto">
       <h2 className="text-3xl font-bold text-emerald-700 mb-3 text-center">Test it Yourself</h2>
       <div className="grid md:grid-cols-2 gap-10 items-center justify-center">
         {/* Left Section: Description Box */}
@@ -67,7 +67,7 @@ export default function TestItYourself() {
             Upload a satellite image to see whether it is <span className="font-semibold text-emerald-700">landslide prone</span>. The model will process your image and return a generated prediction image.
           </p>
           <p className="text-slate-500 mt-3 text-sm italic">
-            Note: Processing may take a few seconds depending on image size.
+            Note: Processing may take a few seconds depending on file size.
           </p>
         </div>
 
@@ -89,7 +89,7 @@ export default function TestItYourself() {
                 onClick={handleSelectClick}
                 className="flex items-center gap-2 px-6 py-3 rounded-lg bg-emerald-600 text-white font-semibold shadow hover:brightness-110 transition-all mb-6"
               >
-                <Upload size={20} /> Choose Image
+                <Upload size={20} /> Choose TIF File
               </motion.button>
 
               {selectedImage && (

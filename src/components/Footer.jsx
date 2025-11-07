@@ -16,7 +16,7 @@ export default function Footer() {
       </p>
 
       <p className="text-sm text-gray-300 mt-2">
-        © 2025 Landslide Detection Project | Developed by IIIT Bhagalpur Students
+        © 2025 Landslide Detection Project | Developed by Students of IIIT Bhagalpur
       </p>
     </footer>
   );
