@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function Results() {
   const metrics = [
-    { title: "Accuracy", value: "94%" },
-    { title: "Precision", value: "92%" },
-    { title: "Recall", value: "90%" },
-    { title: "F1-Score", value: "91%" },
+    { title: "Accuracy", value: "54%" },
+    { title: "Precision", value: "56%" },
+    { title: "Recall", value: "63%" },
+    { title: "F1-Score", value: "70%" },
   ];
 
   return (
@@ -87,7 +87,7 @@ export default function Results() {
 
         <div className="relative overflow-hidden rounded-xl shadow-lg">
           <img
-            src="https://www.researchgate.net/publication/345718542/figure/fig2/AS:960835379802112@1606092414071/The-map-below-shows-2085-reported-landslides-with-fatalities-from-NASAs-Global-Landslide.png"
+            src="detected.jpg"
             alt="Landslide Hazard Map"
             className="w-full rounded-xl transition-transform duration-500 hover:scale-105 hover:shadow-[0_0_25px_#14b8a6]"
           />
