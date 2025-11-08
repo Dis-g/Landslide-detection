@@ -58,9 +58,9 @@ export default function Results() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            "https://assets-cdn.kathmandupost.com/uploads/source/news/2019/environment/Massive%20landslide%20blocked%20Sunkoshi%20River%2001.jpg?sJtY",
-            "https://cdn.ca.emap.com/wp-content/uploads/sites/13/2023/02/Total-collapse-of-road-at-summit-of-State-Highway-25A-1024x683.jpg",
-            "https://e3.365dm.com/21/10/1600x900/skynews-california-storm_5558606.jpg?20211025034102",
+            "/Landslide-1.jpg",
+            "/Landslide-2.jpg",
+            "/Landslide-3.jpg",
           ].map((src, i) => (
             <div
               key={i}
